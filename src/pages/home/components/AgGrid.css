@@ -1,0 +1,134 @@
+/* HEADER STYLING */
+.ag-header-viewport {
+  @apply bg-indigo-500;
+  --tw-bg-opacity: 0.03;
+}
+/* width */
+.ag-wrapper ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.ag-wrapper ::-webkit-scrollbar-track {
+  @apply bg-indigo-500 bg-opacity-10 dark:bg-opacity-20 transition-colors;
+}
+
+/* Handle */
+.ag-wrapper ::-webkit-scrollbar-thumb {
+  @apply bg-indigo-500 bg-opacity-25 hover:bg-opacity-100;
+}
+.ag-header-cell-label {
+  @apply font-medium uppercase text-xs text-gray-300 px-4 flex flex-row-reverse justify-end items-center;
+}
+
+.ag-header-viewport,
+.ag-row {
+  @apply border-t border-indigo-50 transition-colors dark:border-opacity-10;
+}
+.ag-header-cell:first-child .ag-cell-label-container,
+.ag-cell:first-child {
+  @apply border-r border-indigo-100 transition-colors dark:border-opacity-10;
+}
+
+.ag-wrapper {
+  @apply border-b border-indigo-50 transition-colors dark:border-opacity-10;
+}
+
+/* ICONS */
+.ag-sort-ascending-icon {
+  @apply hidden;
+}
+
+.ag-sort-descending-icon {
+  display: block !important;
+  @apply w-4 h-4 text-gray-300;
+}
+
+.ag-sort-descending-icon::before,
+.ag-sort-descending-icon::after {
+  content: "";
+  @apply block w-2 h-2 bg-no-repeat bg-contain opacity-50;
+  color: inherit;
+}
+.ag-sort-ascending-icon:not(.ag-hidden) ~ .ag-sort-descending-icon::before {
+  opacity: 1;
+}
+.ag-sort-descending-icon:not(.ag-hidden)::after {
+  opacity: 1;
+}
+.ag-sort-descending-icon::before {
+  @apply bg-bottom mb-px;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='4' viewBox='0 0 6 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 4L3 0L6 4' fill='%239999CC'/%3E%3C/svg%3E%0A");
+}
+.ag-sort-descending-icon::after {
+  @apply bg-top;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='4' viewBox='0 0 6 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0L3 4L6 0' fill='%239999CC'/%3E%3C/svg%3E%0A");
+}
+
+/* ROWS */
+.ag-cell {
+  @apply flex items-center px-4 text-gray-400 dark:text-gray-300 transition-colors text-sm;
+}
+
+.ag-cell span {
+  @apply flex items-center;
+}
+.ag-cell svg {
+  @apply mr-4;
+}
+.ag-row {
+  @apply hover:bg-indigo-600 hover:bg-opacity-5;
+}
+
+[col-id="rank"] svg {
+  @apply mr-0 ml-1;
+}
+
+[col-id="landingPage"] {
+  @apply text-indigo-600;
+}
+.ag-custom-loader {
+  @apply bg-green-400 bg-opacity-5 text-green-400 flex items-center justify-center h-full w-full text-xs uppercase;
+}
+
+.ag-custom-loader .icon {
+  @apply animate-spin h-4 w-4 mr-2 ;
+}
+
+.ag-menu {
+  @apply bg-white shadow-lg p-2 rounded-lg -m-2;
+  min-width: 200px
+}
+.ag-menu-option {
+  @apply hover:bg-gray-100 py-1 px-2 flex justify-between text-sm items-center;
+}
+.ag-menu-option-shortcut {
+  @apply text-xs text-white relative;
+  z-index: 10;
+
+}
+.ag-menu-option-shortcut:before {
+  content: '';
+  @apply absolute top-1/2 left-1/2 bg-gray-200 block rounded-sm;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  height: 125%;
+  width: 125%;
+}
+
+[ref="eIcon"], [ref="ePopupPointer"] {
+  display: none
+}
+.ag-body-viewport.ag-layout-normal {
+  overflow-y: scroll;
+}
+
+.ag-row-focus, .ag-row-focus:hover {
+  @apply bg-indigo-50 dark:bg-opacity-5 transition-colors;
+}
+html body .ag-cell.ag-cell-focus {
+  @apply bg-indigo-100;
+}
+.ag-cell.ag-cell-focus {
+  @apply dark:bg-gray-700 transition-colors
+}

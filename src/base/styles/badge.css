@@ -1,0 +1,13 @@
+.badge {
+    @apply bg-gray-500 text-gray-500;
+}
+.badge-success {
+    @apply text-green-500 bg-green-500;
+}
+.badge-danger {
+    @apply text-red-500 bg-red-500;
+}
+.badge {
+    @apply text-xs rounded-md font-medium bg-opacity-10;
+    padding: 4px 6px;
+}

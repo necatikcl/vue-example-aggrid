@@ -1,0 +1,36 @@
+{
+  "name": "seo.do",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@ag-grid-enterprise/server-side-row-model": "^26.1.0",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vitejs/plugin-vue-jsx": "^1.2.0",
+    "ag-grid-community": "^26.1.0",
+    "ag-grid-enterprise": "^26.1.0",
+    "ag-grid-vue3": "^26.1.2",
+    "apexcharts": "^3.29.0",
+    "axios": "^0.23.0",
+    "postcss-hexrgba": "^2.0.1",
+    "postcss-import": "^14.0.2",
+    "vite": "^2.6.9",
+    "vue": "^3.2.16",
+    "vue-class-component": "^8.0.0-rc.1",
+    "vue-router": "^4.0.0",
+    "vue3-apexcharts": "^1.4.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "postcss-nested": "^5.0.6",
+    "tailwindcss": "^2.2.17",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.4",
+    "vue-tsc": "^0.3.0"
+  }
+}
